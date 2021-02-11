@@ -9,6 +9,9 @@
     
     <%
     	Integer id = Integer.parseInt(request.getParameter("id"));
+    
+    String action = request.getParameter("action");
+    
     System.out.println("id is "+ id);
     
     StudentDAO studentDaoImpl = new StudentDAOImpl();
@@ -46,7 +49,7 @@
         </div>
     </nav>
     <div class="contact-clean">
-        <form  action="update?id=<%=id %>" method="post">
+        <form  action="Handle?id=<%=id %>&action=<%=action %>" method="post">
             <h2 class="text-center">Update</h2>
             <div class="form-group"><input class="form-control" type="text" name="rollNo" placeholder="Roll No" value="<%=student.getRollNo()%>"></div>
             <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name" value="<%=student.getName()%>"></div>

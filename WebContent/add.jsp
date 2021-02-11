@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
+    
+    <% String action = request.getParameter("action"); %>
 
 <!DOCTYPE html>
 <html>
@@ -23,15 +25,15 @@
             <div class="collapse navbar-collapse"
                 id="navcol-1">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="./AddServlet" style="background-color: #055ada;color: white;border: 2px;border-radius: 30px;width: 100px;text-align: center;">ADD</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="./ViewAllServlet" style="background-color: #055ada;color: white;border: 2px;border-radius: 30px;width: 150px;text-align: center;margin-left: 10px;">View All</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="./Handle?action=add" style="background-color: #055ada;color: white;border: 2px;border-radius: 30px;width: 100px;text-align: center;">ADD</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="./Handle?action=view" style="background-color: #055ada;color: white;border: 2px;border-radius: 30px;width: 150px;text-align: center;margin-left: 10px;">View All</a></li>
                     <li class="nav-item" role="presentation"></li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="contact-clean">
-        <form  action="AddServlet" method="post">
+        <form  action="Handle?action=<%=action %>" method="post">
             <h2 class="text-center">Add</h2>
             <div class="form-group"><input class="form-control" type="text" name="rollNo" placeholder="Roll No"></div>
             <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div>

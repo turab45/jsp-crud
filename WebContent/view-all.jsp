@@ -35,8 +35,8 @@
             <div class="collapse navbar-collapse"
                 id="navcol-1">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="./AddServlet" style="background-color: #055ada;color: white;border: 2px;border-radius: 30px;width: 100px;text-align: center;">ADD</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="./ViewAllServlet" style="background-color: #055ada;color: white;border: 2px;border-radius: 30px;width: 150px;text-align: center;margin-left: 10px;">View All</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="add.jsp?action=add" style="background-color: #055ada;color: white;border: 2px;border-radius: 30px;width: 100px;text-align: center;">ADD</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="./Handle?action=view" style="background-color: #055ada;color: white;border: 2px;border-radius: 30px;width: 150px;text-align: center;margin-left: 10px;">View All</a></li>
                     <li class="nav-item" role="presentation"></li>
                 </ul>
             </div>
@@ -67,8 +67,8 @@
                         <td><%=s.getName() %></td>
                         <td><%=s.getContact() %></td>
                         <td><%=s.getEmail() %></td>
-                        <td style="width: 150px;"><a href='update.jsp?id=<%=s.getId()%>'><i class="icon ion-edit" style="margin: 0px 10px;"></i>Update</a></td>
-                        <td style="width: 150px;"><a href="delete?id=<%=s.getId()%>"><i class="icon ion-android-delete" style="margin: 0px 10px;color: rgb(228,12,12);"></i>Delete</a></td>
+                        <td style="width: 150px;"><a href='update.jsp?id=<%=s.getId()%>&action=update'><i class="icon ion-edit" style="margin: 0px 10px;"></i>Update</a></td>
+                        <td style="width: 150px;"><a href="Handle?id=<%=s.getId()%>&action=delete"><i class="icon ion-android-delete" style="margin: 0px 10px;color: rgb(228,12,12);"></i>Delete</a></td>
                     </tr>
                     <%} %>
                     
